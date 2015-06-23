@@ -50,12 +50,12 @@ class Client
         ];
 
         // Look up adapter name and apply it.
-        if (in_array($config['adapter']['name'], $clientAdapters)) {
+        if (array_key_exists($config['adapter']['name'], $clientAdapters)) {
             $config['adapter']['name'] = $clientAdapters[$config['adapter']['name']];
         }
 
         // Look up filter name and apply it.
-        if (in_array($config['filters']['query']['name'], $clientFilters)) {
+        if (array_key_exists($config['filters']['query']['name'], $clientFilters)) {
             $config['filters']['query']['name'] = $clientFilters[$config['filters']['query']['name']];
         }
 
